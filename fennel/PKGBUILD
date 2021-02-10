@@ -3,7 +3,7 @@
 _lua_version=5.4
 
 pkgname=fennel-git
-pkgver=r1191.ff6de5c
+pkgver=r1194.cd6ba76
 pkgrel=1
 pkgdesc="A Lua Lisp language"
 arch=('x86_64')

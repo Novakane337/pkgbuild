@@ -1,7 +1,7 @@
 # Maintainer: Novakane
 
 pkgname=i3status-rust-git
-pkgver=0.14.3.r1660.g1205bff
+pkgver=0.14.3.r1688.gd580ddb
 pkgrel=1
 pkgdesc='Very resourcefriendly and feature-rich replacement for i3status to use with bar programs (like i3bar and swaybar), written in pure Rust'
 arch=('x86_64')
