@@ -1,0 +1,33 @@
+# Maintainer: Novakane
+
+_lua_version=5.4
+
+pkgname=fennel-git
+pkgver=r1191.ff6de5c
+pkgrel=1
+pkgdesc="A Lua Lisp language"
+arch=('x86_64')
+url="https://github.com/bakpakin/Fennel"
+license=('MIT')
+depends=('lua')
+makedepends=('git' 'make')
+provides=("${pkgname%-*}")
+conflicts=("${pkgname%-*}")
+source=('git+https://git.sr.ht/~technomancy/fennel')
+md5sums=('SKIP')
+
+pkgver() {
+  cd "${pkgname%-*}"
+  echo "r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd "${pkgname%-*}"
+  make fennel
+}
+
+package() {
+  cd "${pkgname%-*}"
+  install -Dm755 fennel "$pkgdir/usr/bin/fennel"
+}
+
